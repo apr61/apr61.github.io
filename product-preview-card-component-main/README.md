@@ -11,10 +11,6 @@ This is a solution to the [Product preview card component challenge on Frontend 
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
-<<<<<<< HEAD
-=======
-- [Acknowledgments](#acknowledgments)
->>>>>>> cfb82f010570ebed2abc5f04c0d988c11d031655
 
 
 ## Overview
@@ -32,13 +28,8 @@ Users should be able to:
 
 ### Links
 
-<<<<<<< HEAD
 - Solution URL: [Solution URL](https://github.com/apr61/apr61.github.io/tree/main/product-preview-card-component-main/)
 - Live Site URL: [Live site URL](https://apr61.github.io/product-preview-card-component-main/)
-=======
-- Solution URL: [Add solution URL here](https://github.com/apr61/apr61.github.io/tree/main/product-preview-card-component-main/)
-- Live Site URL: [Add live site URL here](https://apr61.github.io/product-preview-card-component-main/)
->>>>>>> cfb82f010570ebed2abc5f04c0d988c11d031655
 
 ## My process
 
@@ -55,10 +46,3 @@ Users should be able to:
 - Twitter - [@apradeepreddy9](https://www.twitter.com/apradeepreddy9)
 
 
-<<<<<<< HEAD
-=======
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
->>>>>>> cfb82f010570ebed2abc5f04c0d988c11d031655
