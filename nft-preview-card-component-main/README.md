@@ -46,9 +46,9 @@ Users should be able to:
 ```html
 <div class="image">
 	<img src="images/image-equilibrium.jpg" alt="" />
-		<div class="hover">
-			<img src="images/icon-view.svg" alt="" />
-		</div>
+	<div class="hover">
+		<img src="images/icon-view.svg" alt="" />
+	</div>
 </div>
 ```
 ```css
