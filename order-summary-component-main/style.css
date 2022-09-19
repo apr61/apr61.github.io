@@ -1,0 +1,169 @@
+:root{
+    --clr-primary-100:hsl(225, 100%, 94%);
+    --clr-primary-200:hsl(245, 75%, 52%);
+    --clr-neutral-100: hsl(225, 100%, 98%);
+    --clr-neutral-200:  hsl(224, 23%, 55%);
+    --clr-neutral-300:  hsl(223, 47%, 23%);
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+    --font-family:'Red Hat Display', sans-serif;
+}
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-color: var(--clr-primary-100);
+    height: 100vh;
+    position: relative;
+    font-family: var(--font-family);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+}
+
+.card{
+    width: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 0 0 1rem 1rem;
+    background-color: var(--clr-neutral-100);
+    padding: 1rem;
+    text-align: center;
+}
+
+.image{
+    max-width: 19rem;
+    overflow: hidden;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.image img{
+    max-width: 100%;
+    display: block;
+}
+
+.heading{
+    font-weight: var(--fw-900);
+    color: var(--clr-neutral-300);
+    font-size: 20px;
+    padding: .75rem;
+}
+
+.para{
+    font-weight: var(--fw-500);
+    color: var(--clr-neutral-200);
+    font-size: 12px;
+    width: 14rem;
+    padding-bottom: .75rem;
+}
+
+.plan-desc{
+    width: 15rem;
+    height: 3.75rem;
+    border: 1px solid transparent;
+    background-color: #e2e5f5;
+    border-radius: .25rem;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: .5rem;
+}
+
+.icon{
+    width: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.icon img{
+    width: 2.25rem;
+}
+
+.plan-details{
+    margin-right: 3rem;
+}
+.plan-name{
+    color: var(--clr-neutral-300);
+    font-weight: var(--fw-900);
+}
+
+.plan-time{
+    color: var(--clr-neutral-200);
+}
+
+.change{
+    color: var(--clr-primary-200);
+    font-size: 11px;
+    font-weight: var(--fw-700);
+    text-decoration: underline;
+}
+
+.change:hover{
+    cursor: pointer;
+    text-decoration: none;
+    opacity: .7;
+}
+
+.payment{
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-primary-200);
+    width: 15.5rem;
+    margin: 1rem;
+    padding: .65rem;
+    border-radius: .5rem;
+    border: 1px solid transparent;
+    box-shadow: 0 7px 20px hsl(244, 72%, 75%);
+}
+
+.payment:hover{
+    cursor: pointer;
+    opacity: .7;
+}
+
+.cancel-order{
+    font-size: 12px;
+    color: var(--clr-neutral-200);
+    margin-bottom: 1rem;
+}
+
+.cancel-order:hover{
+    color: var(--clr-neutral-300);
+    font-weight: var(--fw-700);
+}
+
+
+.attribution{
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    padding: 6px;
+    color: var(--clr-neutral-300);
+    bottom: 0;
+}
+
+.attribution a:hover{
+    cursor: pointer;
+    color: var(--clr-neutral-200);
+}
+
+.attribution a{
+    color: var(--clr-neutral-300);
+}
