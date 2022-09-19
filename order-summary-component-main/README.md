@@ -46,7 +46,7 @@ Users should be able to:
 ### What I learned
 
 ```css
-.proud-of-this-css {
+.learned-this-css {
   box-shadow: 0 7px 20px hsl(244, 72%, 75%);
 }
 ```
