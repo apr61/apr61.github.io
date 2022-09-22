@@ -1,0 +1,122 @@
+:root{
+    --clr-primary-100: hsl(185, 75%, 39%);
+    --clr-primary-200: hsl(229, 23%, 23%);
+    --clr-primary-300: hsl(227, 10%, 46%);
+    --clr-neutral-100: hsl(0, 0%, 59%);
+    --font-size: 18px;
+    --font-family: 'Kumbh Sans', sans-serif;
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./images/bg-pattern-top.svg),url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat , no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+    background-color: var(--clr-primary-100);
+    font-family: var(--font-family);
+    max-height: 100vh;
+    display: flex;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.card{
+    min-width: 21.85rem;
+    background-color: white;
+    text-align: center;
+    border-radius: 0 0 1em 1em;
+}
+
+.image{
+    position: relative;
+    display: flex;
+}
+
+.image .pic-bg{
+    border-radius: 1em 1em 0 0;
+}
+
+.profile-pic{
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    bottom: -50px;
+    left: 8rem;
+    border: 5px solid white;
+}
+
+.name-age{
+    padding: 1rem;
+    margin-top: 3.25em;
+}
+
+.name{
+    font-size: var(--font-size);
+    color: var(--clr-primary-200);
+    font-weight: var(--fw-700);
+    padding-right: .5em;
+}
+.age{
+    font-size: var(--font-size);
+    color: var(--clr-primary-300);
+    font-weight: var(--fw-700);
+}
+
+.location{
+    font-size: var(--font-size);
+    font-weight: var(--fw-400);
+    color: var(--clr-neutral-100);
+    padding-bottom: 1.3em;
+}
+
+hr{
+    opacity: .4;
+}
+
+.social{
+    display: flex;
+    padding: 2rem;
+    justify-content: space-around;
+}
+
+.count{
+    font-size: 1.3em;
+    font-weight: var(--fw-700);
+    color: var(--clr-primary-200);
+}
+
+.title{
+    color: var(--clr-neutral-100);
+}
+
+.attribution{
+    text-align: center;
+    color: var(--clr-primary-200);
+    font-size: 20px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution a:hover{
+    color: var(--clr-primary-300);
+}
+
+.attribution a{
+    color: var(--clr-primary-200);
+}
