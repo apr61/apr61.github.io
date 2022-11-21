@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/apr61/apr61.github.io/tree/main/nft-preview-card-component-main/)
-- Live Site URL: [Live site URL](https://apr61.github.io/nft-preview-card-component-main/)
+- Solution URL: [Solution URL](https://github.com/apr61/apr61.github.io/tree/main/interactive-rating-component-main/)
+- Live Site URL: [Live site URL](https://apr61.github.io/interactive-rating-component-main/)
 
 ## My process
 
