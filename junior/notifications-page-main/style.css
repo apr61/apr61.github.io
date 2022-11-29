@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+    --font-family: 'Plus Jakarta Sans', sans-serif;
+    --clr-primary-red: hsl(1, 90%, 64%);
+    --clr-primary-blue: hsl(219, 85%, 26%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-neutral-light-gy-blue: hsl(210, 60%, 98%);
+    --clr-neutral-light-blue-1: hsl(211, 68%, 94%);
+    --clr-neutral-light-blue-2: hsl(205, 33%, 90%);
+    --clr-neutral-gray-blue: hsl(219, 14%, 63%);
+    --clr-neutral-dark-gy-blue: hsl(219, 12%, 42%);
+    --clr-neutral-very-dark-blue: hsl(24, 21%, 14%);
+    --fw-500: 500;
+    --fw-800: 800;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--clr-neutral-white);
+    min-height: 100vh;
+}
+
+section {
+    margin: 1rem;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head h3 {
+    font-weight: var(--fw-800);
+    color: var(--clr-neutral-very-dark-blue);
+}
+
+.number {
+    background-color: var(--clr-primary-blue);
+    color: var(--clr-neutral-white);
+    font-size: 14px;
+    font-weight: var(--fw-500);
+    padding: .2rem .65rem;
+    border-radius: .25rem;
+    margin-left: .25rem;
+    align-self: center;
+}
+
+.mark-as-read {
+    border: 0;
+    background-color: transparent;
+    color: var(--clr-neutral-dark-gy-blue);
+    cursor: pointer;
+    font-weight: var(--fw-500);
+    font-size: .85rem;
+}
+
+.mark-as-read:hover{
+    color: var(--clr-primary-blue);
+}
+
+.all-notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.card {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.profile-pic {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.card .profile-name {
+    font-size: .85rem;
+    font-weight: var(--fw-800);
+    color: var(--clr-neutral-very-dark-blue);
+    text-decoration: none;
+}
+
+.profile-name:hover{
+    color: var(--clr-primary-blue);
+}
+
+.msg {
+    margin-left: .25rem;
+    font-size: .85rem;
+    font-weight: var(--fw-500);
+    color: var(--clr-neutral-gray-blue);
+}
+
+.reacted-msg {
+    color: var(--clr-neutral-dark-gy-blue);
+    font-weight: var(--fw-800);
+    text-decoration: none;
+}
+
+.reacted-msg:hover{
+    color: var(--clr-primary-blue);
+}
+
+.chess-club {
+    color: var(--clr-primary-blue);
+    font-weight: var(--fw-800);
+    text-decoration: none;
+}
+
+.chess-club::before {
+    content: "\00a0";
+}
+
+.time {
+    color: var(--clr-neutral-gray-blue);
+    font-size: .75rem;
+}
+
+.new {
+    background-color: var(--clr-neutral-light-gy-blue);
+}
+
+.card.new .indicator {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: .125rem;
+    width: .35rem;
+    height: .35rem;
+    background-color: var(--clr-primary-red);
+    border-radius: 50%;
+}
+
+.private-message {
+    padding: 1rem;
+    border: 1px solid var(--clr-neutral-gray-blue);
+    font-size: 14px;
+    border-radius: .25rem;
+    color: var(--clr-neutral-dark-gy-blue);
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.private-message:hover{
+    background-color: var(--clr-neutral-light-blue-2);
+    border: 1px solid transparent;
+}
+
+.msg-pic {
+    margin-left: auto;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+.msg-pic img{
+    width: 100%;
+}
+
+.msg-pic:hover img{
+    outline: 3px solid var(--clr-neutral-light-blue-2);
+    border-radius: .25rem;
+}
+
+@media (min-width: 50rem) {
+    body {
+        background-color: var(--clr-neutral-light-blue-2);
+    }
+
+    section {
+        max-width: 45rem;
+        margin: 3rem auto;
+        background-color: var(--clr-neutral-white);
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+}
