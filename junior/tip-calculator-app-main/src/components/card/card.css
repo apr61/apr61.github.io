@@ -1,0 +1,51 @@
+.card {
+  background-color: var(--clr-neutral-very-dark-cyan);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  width: 100%;
+}
+
+.card h4 {
+  color: var(--clr-neutral-very-light-gray-cyan);
+  font-size: 1rem;
+}
+
+.card p {
+  color: var(--clr-neutral-gray-cyan);
+}
+
+.amount {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+
+.amount .result {
+  color: var(--clr-primary-cyan);
+  font-size: 2rem;
+}
+
+.reset {
+  background-color: var(--clr-primary-cyan);
+  color: var(--clr-neutral-very-dark-cyan);
+  width: 100%;
+  text-transform: uppercase;
+}
+.reset:hover{
+  background-color: var(--clr-hover);
+}
+.reset:disabled {
+  cursor: not-allowed;
+  background-color: var(--clr-button-disabled);
+}
+
+@media (min-width: 50rem) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .reset {
+    margin-top: auto;
+  }
+}
