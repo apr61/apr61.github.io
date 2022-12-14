@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+:root{
+    --clr-pri-sft-red: hsl(7, 99%, 70%);
+    --clr-pri-yellow: hsl(51, 100%, 49%);
+    --clr-pri-graphic-design: hsl(167, 40%, 24%);
+    --clr-pri-photography: hsl(198, 62%, 26%);
+    --clr-pri-footer: hsl(168, 34%, 41%);
+    --clr-neu-vd-des-blue: hsl(212, 27%, 19%);
+    --clr-neu-d-gray-blue: hsl(232, 10%, 55%);
+    --clr-neu-gray-blue: hsl(210, 4%, 67%);
+    --clr-neu-white: hsl(0, 0%, 100%);
+    --fs-body: 18px;
+    --ff-para: 'Barlow', sans-serif;
+    --ff-headings: 'Fraunces', serif;
+    --fw-700: 700;
+    --fw-900: 900;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-size: var(--fs-body);
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+}
+
+/* header starts */
+
+header{
+    background-image: url('./images/mobile/image-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header nav{
+    display: flex;
+    padding: 2rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .nav-list{
+ display: none;
+}
+
+.logo{
+    width: 8rem;
+}
+
+.open-menu{
+    width: 1.5rem;
+}
+
+.header-pic{
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+h1{
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-900);
+    color: var(--clr-neu-white);
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.header-pic>img{
+    margin-top: 3rem;
+    width: 1.75rem;
+}
+
+/* header ends  */
+
+/* transform section starts */
+
+.content{
+    padding: 3rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.content h2{
+    font-family: var(--ff-headings);
+    font-size: 2rem;
+    color: var(--clr-neu-vd-des-blue);
+}
+
+.content p{
+    font-family: var(--ff-para);
+    color: var(--clr-neu-d-gray-blue);
+}
+
+.learn-more{
+    border: 0;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-family: var(--ff-headings);
+    color: var(--clr-neu-vd-des-blue);
+    position: relative;
+    width: fit-content;
+}
+.learn-more::after{
+    content: " ";
+    position: absolute;
+    background-color: hsl(51, 100%, 49%, .2);
+    bottom: -1px;
+    left: -4.5px;
+    width: 6.5rem;
+    height: .375rem;
+    z-index: -1;
+    border-radius: 1rem;
+}
+
+/* transform section ends  */
+
+/* stand out section starts  */
+
+.stand-out .learn-more::after{
+    background-color: hsl(7, 99%, 70%, .3);
+}
+
+/* stand out section ends  */
+
+/* graphic design section starts  */
+
+.graphic-design{
+    position: relative;
+    display: block;
+    line-height: 0;
+}
+
+.text-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: var(--clr-pri-graphic-design);
+    margin: 0 1rem;
+    margin-bottom: 5rem;
+}
+
+.text-overlay h2{
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-700);
+    margin-bottom: 1.5rem;
+}
+
+.text-overlay p{
+    font-family: var(--ff-para);
+    line-height: 1.75rem;
+}
+
+
+/* graphic design section ends  */
+
+/* photography section starts  */
+
+.photography{
+    position: relative;
+    display: block;
+    line-height: 0;
+}
+
+.photography .text-overlay{
+    color: var(--clr-pri-photography);
+}
+
+/* photography section ends  */
+
+/* testimonial section starts */
+.testimonials{
+    padding: 3rem 1.5rem;
+}
+.testimonials h3{
+    text-transform: uppercase;
+    color: var(--clr-neu-gray-blue);
+    font-family: var(--ff-headings);
+    letter-spacing: .125rem;
+    text-align: center;
+}
+
+.testimonial{
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.testimonial img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.testimonial p{
+    line-height: 1.75rem;
+    font-family: var(--ff-para);
+    color: var(--clr-neu-d-gray-blue);
+    margin: 1.25rem 0;
+}
+
+.user-name{
+    color: var(--clr-neu-vd-des-blue);
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-700);
+}
+
+.role{
+    font-size: .75rem;
+    margin: 1rem 0;
+    color: var(--clr-neu-gray-blue);
+}
+
+/* testimonial section ends  */
+
+/* image collection section starts  */
+
+.image-collection{
+    line-height: 0;
+}
+.image-collection div{
+    display: flex;
+}
+
+/* image collection section ends  */
+
+/* footer starts  */
+
+
+
+
+/* footer ends  */
