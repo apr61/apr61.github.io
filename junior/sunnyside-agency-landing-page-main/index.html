@@ -9,25 +9,30 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Sunnyside agency landing page</title>
+  <script src="https://kit.fontawesome.com/dd4e279429.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
   <header>
-    <nav>
-      <div class="logo">
+    <picture>
+      <img src="./images/mobile/image-header.jpg" alt="">
+      <source media="(min-width: 50rem)" src="./images/desktop/image-header.jpg">
+    </picture>
+    <nav class="open">
+      <a href="#" class="logo">
         <img src="./images/logo.svg" alt="sunnyside">
-      </div>
+      </a>
       <ul class="nav-list">
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-      <div class="open-menu">
-        <img src="./images/icon-hamburger.svg" alt="open menu">
-      </div>
     </nav>
+    <div class="open-menu">
+      <img src="./images/icon-hamburger.svg" alt="open menu">
+    </div>
     <div class="header-pic">
       <h1>
         We are creatives
@@ -171,29 +176,28 @@
     </section>
   </main>
   <footer>
-    <div class="logo">
+    <a href="#" class="logo">
       <img src="./images/logo.svg" alt="sunnyside">
-    </div>
+    </a>
     <nav>
       <ul class="nav-list">
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
     <div class="social-links">
       <a href="#">
-        <img src="./images/icon-facebook.svg" alt="facebook">
+        <i class="fa-brands fa-square-facebook"></i>
       </a>
       <a href="#">
-        <img src="./images/icon-instagram.svg" alt="instagram">
+        <i class="fa-brands fa-instagram"></i>
       </a>
       <a href="#">
-        <img src="./images/icon-twitter.svg" alt="twitter">
+        <i class="fa-brands fa-twitter"></i>
       </a>
       <a href="#">
-        <img src="./images/icon-pinterest.svg" alt="pinterest">
+        <i class="fa-brands fa-pinterest"></i>
       </a>
     </div>
   </footer>
