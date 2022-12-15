@@ -100,9 +100,9 @@ nav.open .nav-list{
     position: absolute;
     z-index: 999;
     top: 6rem;
-    left: 1rem;
-    right: 1rem;
-    width: 90vw;
+    left: 1.5rem;
+    right: 1.5rem;
+    width: 87.5vw;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -127,6 +127,16 @@ nav.open .nav-list li:last-of-type a{
     color: var(--clr-neu-vd-des-blue);
 }
 
+nav.open .nav-list::after{
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: -1.5rem;
+    border-top: none;
+    border-right: none;
+    border-left: 2.25rem solid transparent;
+    border-bottom: 2.25rem solid var(--clr-neu-white);
+}
 
 /* header ends  */
 
