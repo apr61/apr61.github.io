@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/apr61/apr61.github.io/tree/main/junior/time-tracking-dashboard-main)
-- Live Site URL: [Live site URL](https://your-live-site-url.com)
+- Live Site URL: [Live site URL](https://apr61.github.io/junior/time-tracking-dashboard-main)
 
 ## My process
 
