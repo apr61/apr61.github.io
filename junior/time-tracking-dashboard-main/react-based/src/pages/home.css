@@ -1,0 +1,35 @@
+.container{
+    padding: 5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.card__wrapper{
+    display: grid;
+    gap: 1.125rem;
+}
+
+@media (max-width: 70rem) and (min-width:40rem){
+    .container{
+        max-width: 40rem;
+        margin-inline: auto;
+    }
+}
+
+@media (min-width:70rem) {
+    .container{
+        flex-direction: row;
+        padding: 0;
+    }
+    .card__wrapper{
+        grid-template-columns: repeat(3, 15rem);
+        grid-template-rows: repeat(2, 11.5rem);
+        gap: 1.5rem;
+    }
+}

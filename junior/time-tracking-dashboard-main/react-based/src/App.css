@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+:root{
+    --clr-pri-profile-bg: hsl(246, 80%, 60%);
+    --clr-pri-work: hsl(15, 100%, 70%);
+    --clr-pri-play: hsl(195, 74%, 62%);
+    --clr-pri-study: hsl(348, 100%, 68%);
+    --clr-pri-exercise: hsl(145, 58%, 55%);
+    --clr-pri-social:  hsl(264, 64%, 52%);
+    --clr-pri-self-care: hsl(43, 84%, 65%);
+    --clr-neu-bg:  hsl(226, 43%, 10%);
+    --clr-neu-card-bg: hsl(235, 46%, 20%);
+    --clr-neu-summary: hsl(235, 45%, 61%);
+    --clr-neu-report: hsl(236, 100%, 87%);
+    --clr-neu-card-hvr: hsl(235, 45%, 31%);
+    --clr-fnt: hsl(0, 0%, 100%);
+    --ff: 'Rubik', sans-serif;
+    --border-radius: 1rem;
+
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff);
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--clr-neu-bg);
+    overflow-x: hidden;
+}
+
+@media (min-width: 70rem) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
