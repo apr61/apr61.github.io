@@ -28,13 +28,14 @@
 body{
     min-height: 100vh;
     background-color: var(--clr-neu-bg);
+    overflow-x: hidden;
 }
 
 .container{
     padding: 5rem 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.125rem;
+    gap: 1.5rem;
 }
 
 img{
@@ -46,8 +47,8 @@ img{
     background-color: var(--clr-neu-card-bg);
     border-radius: var(--border-radius);
     background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: -27%;
+    background-position: top -.5rem right .75rem;
+    background-size: 3.5rem;
 }
 
 .card__profile{
@@ -95,13 +96,17 @@ br{
     cursor: pointer;
 }
 
-.card__options .btn:hover, .active{
+.btn.active{
     color: var(--clr-fnt);
 }
 
+.card__options .btn:hover{
+    color: var(--clr-fnt);
+}
+
+
 .card__wrapper{
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1.125rem;
 }
 
@@ -145,7 +150,7 @@ br{
     border-radius: var(--border-radius);
     padding: 1.25rem;
     color: var(--clr-fnt);
-    margin-top: 2.25rem;
+    margin-top: 2.45rem;
     cursor: pointer;
 }
 
@@ -157,10 +162,20 @@ br{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
 }
 
-.card__data__title__menu:hover{
+.card__data__title{
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.icon{
+    color: var(--clr-neu-summary);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.icon:hover{
     color: var(--clr-fnt);
 }
 
@@ -175,31 +190,37 @@ br{
     font-weight: 300;
 }
 
-.card__data_previous{
+.card__data__previous{
     font-size: .85rem;
     color: var(--clr-neu-summary);
 }
 
 /* card data ends */
 
-@media (min-width: 60rem) {
-    .container{
-        flex-direction: row;
-        min-height: 100vh;
+@media (max-width: 70rem) and (min-width:40rem){
+   .container{
+       max-width: 40rem;
+       margin-inline: auto;
+   }
+}
+
+
+@media (min-width: 70rem) {
+    body{
+        display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .container{
+        flex-direction: row;
         padding: 0;
     }
     .container>.card{
         width: 100%;
-        max-width: 15rem;
+        max-width: 13rem;
+        flex-shrink: 0;
     }
-    .card__wrapper>.card{
-        width: 100%;
-        max-width: 15rem;
-        height: 100%;
-        max-height: 13rem;
-    }
+    
     br{
         display: block;
     }
@@ -216,8 +237,9 @@ br{
         gap:1rem;
     }
     .card__wrapper{
-        flex-direction: row;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(3, 15rem);
+        grid-template-rows: repeat(2, 11.5rem);
+        gap: 1.5rem;
     }
     .card__data__summary{
         margin-top: .5rem;

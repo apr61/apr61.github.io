@@ -9,8 +9,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Time tracking dashboard</title>
+  <script src="https://kit.fontawesome.com/dd4e279429.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./style.css">
-
 </head>
 
 <body>
@@ -27,86 +27,15 @@
         </div>
       </div>
       <div class="card__options">
-        <button class="btn daily">Daily</button>
+        <button class="btn daily active">Daily</button>
         <button class="btn weekly">Weekly</button>
         <button class="btn monthly">Monthly</button>
       </div>
     </section>
-    <section class="card__wrapper">
-      <div class="card card--color--work">
-        <div class="card__data">
-          <div class="card__data__title__menu">
-            <h2 class="card__data__title">Work</h2>
-            <img src="./images/icon-ellipsis.svg" alt="menu">
-          </div>
-          <div class="card__data__summary">
-            <div class="card__data__current">5hrs</div>
-            <div class="card__data_previous">Yesterday - 7hrs</div>
-          </div>
-        </div>
-      </div>
-      <div class="card card--color--play">
-        <div class="card__data">
-          <div class="card__data__title__menu">
-            <h2 class="card__data__title">Work</h2>
-            <img src="./images/icon-ellipsis.svg" alt="menu">
-          </div>
-          <div class="card__data__summary">
-            <div class="card__data__current">5hrs</div>
-            <div class="card__data_previous">Yesterday - 7hrs</div>
-          </div>
-        </div>
-      </div>
-      <div class="card card--color--study">
-        <div class="card__data">
-          <div class="card__data__title__menu">
-            <h2 class="card__data__title">Work</h2>
-            <img src="./images/icon-ellipsis.svg" alt="menu">
-          </div>
-          <div class="card__data__summary">
-            <div class="card__data__current">5hrs</div>
-            <div class="card__data_previous">Yesterday - 7hrs</div>
-          </div>
-        </div>
-      </div>
-      <div class="card card--color--exercise">
-        <div class="card__data">
-          <div class="card__data__title__menu">
-            <h2 class="card__data__title">Work</h2>
-            <img src="./images/icon-ellipsis.svg" alt="menu">
-          </div>
-          <div class="card__data__summary">
-            <div class="card__data__current">5hrs</div>
-            <div class="card__data_previous">Yesterday - 7hrs</div>
-          </div>
-        </div>
-      </div>
-      <div class="card card--color--social">
-        <div class="card__data">
-          <div class="card__data__title__menu">
-            <h2 class="card__data__title">Work</h2>
-            <img class="card__data__menu" src="./images/icon-ellipsis.svg" alt="menu">
-          </div>
-          <div class="card__data__summary">
-            <div class="card__data__current">5hrs</div>
-            <div class="card__data_previous">Yesterday - 7hrs</div>
-          </div>
-        </div>
-      </div>
-      <div class="card card--color--self">
-        <div class="card__data">
-          <div class="card__data__title__menu">
-            <h2 class="card__data__title">Work</h2>
-            <img src="./images/icon-ellipsis.svg" alt="menu">
-          </div>
-          <div class="card__data__summary">
-            <div class="card__data__current">5hrs</div>
-            <div class="card__data_previous">Yesterday - 7hrs</div>
-          </div>
-        </div>
-      </div>
+    <section class="card__wrapper" data-card-wrapper>
     </section>
   </main>
+  <script src="./script.js" type="module"></script>
 </body>
 
 </html>
