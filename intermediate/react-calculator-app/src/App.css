@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+:root{
+    /* Theme1  */
+    --clr-t1-bg: hsl(222, 26%, 31%);
+    --clr-t1-tokp-bg: hsl(223, 31%, 20%);
+    --clr-t1-scr-bg: hsl(224, 36%, 15%);
+    --clr-t1-key-bg: hsl(225, 21%, 49%);
+    --clr-t1-key-sha: hsl(224, 28%, 35%);
+    --clr-t1-key-tok-bg: hsl(6, 63%, 50%);
+    --clr-t1-key-tok-sha: hsl(6, 70%, 34%);
+    --clr-t1-key-bg-pri: hsl(30, 25%, 89%);
+    --clr-t1-key-bg-pri-sha: hsl(28, 16%, 65%);
+    --clr-t1-text: hsl(221, 14%, 31%);
+    --clr-t1-txt-hvr: hsl(30, 25%, 99%);
+    --clr-t1-key-hvr: hsl(224, 36%, 70%);
+    --clr-t1-equal-tog-hvr: hsl(6, 63%, 60%);
+
+    --clr-white: hsl(0, 0%, 100%);
+    --ff: 'League Spartan', sans-serif;
+    --numbers-fs: 32px;
+}
+
+*,*::after, *::before{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: var(--ff);
+    margin: 2rem;
+    overflow: hidden;
+    --max-width: 30rem;
+    --brd-rad: .5rem;
+    --pad-lr: 1rem;
+    --pad-tb: 1.5rem;
+
+    --bg: var(--clr-t1-bg);
+    --scr-bg: var(--clr-t1-scr-bg);
+    --key-equal: var(--clr-t1-key-tok-bg);
+    --key-equal-sha: var(--clr-t1-key-tok-sha);
+    --keypad-bg: var(--clr-t1-tokp-bg);
+    --num-txt: var(--clr-t1-text);
+    --key-bg-pri: var(--clr-t1-key-bg-pri);
+    --key-bg-pri-sha: var(--clr-t1-key-bg-pri-sha);
+    --key-del-reset: var(--clr-t1-key-bg);
+    --key-del-reset-sha: var(--clr-t1-key-sha);
+    --key-pri-hvr: var(--clr-t1-txt-hvr);
+    --key-del-reset-hvr: var(--clr-t1-key-hvr);
+    --key-equal-toggle-hvr: var(--clr-t1-equal-tog-hvr);
+
+    background-color: var(--bg);
+}
+
+.container{
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    margin-top: 2rem;
+}
+
+.keypad{
+    margin-top: 1rem;
+    background-color: var(--keypad-bg);
+    padding: var(--pad-lr);
+    border-radius: var(--brd-rad);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "seven eight nine del"
+                        "four five six plus"
+                        "one two three minus"
+                        "dot zero div mul"
+                        "reset reset eql eql";
+}
+
+@media (min-width: 50rem) {
+    body{
+        margin-top: 4rem;
+    }
+}
+

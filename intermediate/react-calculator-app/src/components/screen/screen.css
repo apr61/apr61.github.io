@@ -1,0 +1,16 @@
+.screen input{
+    border: 0;
+    height: 4rem;
+    background-color: var(--scr-bg);
+    border-radius: var(--brd-rad);
+    padding: var(--pad-tb) var(--pad-lr);
+    width: 100%;
+    color: var(--clr-white);
+    text-align: end;
+    font-size: 2rem;
+    font-family: var(--ff);
+}
+
+.screen input:focus{
+    outline: none;
+}

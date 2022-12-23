@@ -1,0 +1,103 @@
+button{
+    border: 0;
+    background-color: var(--clr-t1-key-bg-pri);
+    padding: .75rem 1.5rem;
+    font-size: var(--numbers-fs);
+    border-radius: .25rem;
+    cursor: pointer;
+    font-family: var(--ff);
+    color: var(--num-txt);
+    box-shadow: 0px 2px 0px 0px var(--clr-t1-key-bg-pri-sha);
+}
+
+button:hover{
+    background-color: var(--key-pri-hvr);
+}
+
+.del, .reset{
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    background-color: var(--key-del-reset);
+    color: var(--clr-white);
+    box-shadow: 0px 2px 0px 0px var(--key-del-reset-sha);
+    text-transform: uppercase;
+}
+
+.del:hover, .reset:hover{
+    background-color: var(--key-del-reset-hvr);
+}
+
+.del{
+    grid-area: del;
+}
+
+.reset{
+    grid-area: reset;
+}
+
+button[role = 'submit']{
+    background-color: var(--key-equal);
+    color: var(--clr-white);
+    box-shadow: 0px 2px 0px 0px var(--key-equal-sha);
+    grid-area: eql;
+}
+
+button[role = 'submit']:hover{
+    background-color: var(--key-equal-toggle-hvr);
+}
+
+.one{
+    grid-area: one;
+}
+
+.two{
+    grid-area: two;
+}
+
+.three{
+    grid-area: three;
+}
+
+.four{
+    grid-area: four;
+}
+
+.five{
+    grid-area: five;
+}
+
+.six{
+    grid-area: six;
+}
+
+.seven{
+    grid-area: seven;
+}
+
+.eight{
+    grid-area: eight;
+}
+
+.zero{
+    grid-area: zero;
+}
+
+.plus{
+    grid-area: plus;
+}
+
+.minus{
+    grid-area: minus;
+}
+
+.mul{
+    grid-area: mul;
+}
+
+.div{
+    grid-area: div;
+}
+
+.dot{
+    grid-area: dot;
+}
