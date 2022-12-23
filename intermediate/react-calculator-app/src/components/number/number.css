@@ -35,14 +35,14 @@ button:hover{
     grid-area: reset;
 }
 
-button[role = 'submit']{
+button[type = 'submit']{
     background-color: var(--key-equal);
     color: var(--clr-white);
     box-shadow: 0px 2px 0px 0px var(--key-equal-sha);
     grid-area: eql;
 }
 
-button[role = 'submit']:hover{
+button[type = 'submit']:hover{
     background-color: var(--key-equal-toggle-hvr);
 }
 
