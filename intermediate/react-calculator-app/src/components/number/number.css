@@ -1,7 +1,7 @@
 button{
     border: 0;
     background-color: var(--clr-t1-key-bg-pri);
-    padding: .75rem 1.5rem;
+    padding: .5rem 1rem;
     font-size: var(--numbers-fs);
     border-radius: .25rem;
     cursor: pointer;
@@ -16,7 +16,7 @@ button:hover{
 
 .del, .reset{
     font-size: 1.5rem;
-    padding: .5rem 1rem;
+    padding: .25rem .75rem;
     background-color: var(--key-del-reset);
     color: var(--clr-white);
     box-shadow: 0px 2px 0px 0px var(--key-del-reset-sha);

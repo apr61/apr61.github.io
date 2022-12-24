@@ -1,10 +1,10 @@
 import React from 'react'
 import './screen.css'
 
-function Screen({input, handleSetInput}) {
+function Screen({input}) {
   return (
     <section className='screen'>
-        <input type="text" name='res' value={input} onChange={(e) => handleSetInput(e.target.value)}/>
+        <div data-screen>{input}</div>
     </section>
   )
 }

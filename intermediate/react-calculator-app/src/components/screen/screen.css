@@ -1,4 +1,4 @@
-.screen input{
+.screen div{
     border: 0;
     height: 4rem;
     background-color: var(--scr-bg);
@@ -9,8 +9,4 @@
     text-align: end;
     font-size: 2rem;
     font-family: var(--ff);
-}
-
-.screen input:focus{
-    outline: none;
 }

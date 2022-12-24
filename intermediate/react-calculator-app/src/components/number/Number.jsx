@@ -2,7 +2,7 @@ import React from 'react'
 import './number.css'
 
 
-const operators = {
+const classNameDesc = {
   '0': 'zero',
   '1': 'one',
   '2': 'two',
@@ -26,9 +26,9 @@ function Number(props) {
   const { num, handleNumber, handleReset, handleRemove } = { ...props }
   return (
     <button type={num === 'reset' ? 'reset' : num === '=' ? 'submit' : 'button'}
-      className={operators[num]}
+      className={classNameDesc[num]}
       onClick={num === 'reset'? () => handleReset() : num === 'del'? () => 
-      handleRemove() : (e) => handleNumber(e.target.textContent)}>{num}</button>
+        handleRemove() : (e) => handleNumber(e.target.textContent)}>{num}</button>
   )
 }
 
