@@ -8,6 +8,7 @@ button{
     font-family: var(--ff);
     color: var(--num-txt);
     box-shadow: 0px 2px 0px 0px var(--key-bg-pri-sha);
+    transition: all 200ms ease-in;
 }
 
 button:hover{

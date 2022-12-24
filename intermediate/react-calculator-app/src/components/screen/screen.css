@@ -1,12 +1,28 @@
-.screen div{
+.screen{
+    position: relative;
+}
+.screen .input{
     border: 0;
     height: 4rem;
     background-color: var(--scr-bg);
     border-radius: var(--brd-rad);
     padding: var(--pad-tb) var(--pad-lr);
-    width: 100%;
     color: var(--screen-txt-clr);
     text-align: end;
     font-size: 2rem;
     font-family: var(--ff);
+}
+
+.screen .history{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 0;
+    transform: translate(50%, 50%);
+    z-index: 999;
+}
+
+.screen .history img{
+    width: 100%;
+    cursor: pointer;
 }

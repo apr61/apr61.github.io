@@ -1,0 +1,58 @@
+.history-section{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: var(--his-width);
+    background-color: var(--clr-white);
+    color: black;
+    transition: all 250ms ease-in-out;
+    z-index: 9999;
+}
+
+.history-section.open{
+    visibility: visible;
+    opacity: 1;
+}
+
+.history-section .close-img{
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.history-head{
+    display: flex;
+    align-items: center;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid black;
+}
+
+.his-container{
+    margin: 1rem;
+}
+
+.history-data{
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.history-data li{
+    padding: .5rem;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 50rem) {
+    .history-section{
+        right: 0;
+        left: 70vw;
+    }
+}

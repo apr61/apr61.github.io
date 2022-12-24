@@ -69,6 +69,7 @@ body{
     --brd-rad: .5rem;
     --pad-lr: 1rem;
     --pad-tb: 1.5rem;
+    --his-width: 70vw;
 
     --bg: var(--clr-t1-bg);
     --scr-bg: var(--clr-t1-scr-bg);
@@ -90,6 +91,7 @@ body{
     --clr-equal: var(--clr-white);
 
     background-color: var(--bg);
+    transition: background-color 350ms ease-in;
 }
 
 .theme2-clr{
@@ -160,6 +162,7 @@ body{
 @media (min-width: 50rem) {
     body{
         margin-top: 4rem;
+        --his-width: 30vw;
     }
 }
 

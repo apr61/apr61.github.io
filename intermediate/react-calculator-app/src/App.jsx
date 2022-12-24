@@ -1,6 +1,8 @@
+import { useEffect } from 'react';
 import { useState } from 'react';
 import './App.css';
 import Header from './components/header/Header';
+import History from './components/history/History';
 import Number from './components/number/Number';
 import Screen from './components/screen/Screen';
 import ThemeProvider from './context/ThemeContext';
@@ -10,8 +12,10 @@ const ButtonTypes = ['=', 'reset', 'del']
 const operators = ['+', '-', 'x', '/'];
 
 function App() {
-
+  const prevData = JSON.parse(localStorage.getItem('history'))
   const [input, setInput] = useState('')
+  const [openHistory, setOpenHistory] = useState(false)
+  const [historyData, setHistoryData] = useState(prevData || [])
 
   function isOperator(val) {
     return operators.indexOf(val) !== -1;
@@ -57,7 +61,7 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if(input !== '' && !isOperator(input.charAt(0))){
+    if (input !== ' ' && !isOperator(input.charAt(0))) {
       let numbers = [];
       let inpArr = input.split('');
       let currNum = '';
@@ -74,18 +78,25 @@ function App() {
         numbers.push(+currNum)
         currNum = ''
       }
-      setInput(eval(numbers.join('')) + '');
-    }else{
+      let res = eval(numbers.join('').replace('x', '*'));
+      setInput(res + '')
+      let hisData = { id: Date.now(), cal: numbers.join('').toString(), res: res}
+      setHistoryData(oldValue => [...oldValue, hisData])
+    } else {
       setInput('');
     }
   }
+
+  useEffect(() => {
+    localStorage.setItem('history', JSON.stringify(historyData));
+  }, [historyData])
 
   return (
     <ThemeProvider>
       <Header />
       <main className="container">
         <form onSubmit={handleSubmit}>
-          <Screen input={input} />
+          <Screen input={input} hisOpen={openHistory} handleHistory={setOpenHistory} />
           <section className="keypad">
             {numOp.map(num => <Number key={num} num={num}
               handleNumber={handleNumber}
@@ -94,6 +105,7 @@ function App() {
           </section>
         </form>
       </main>
+      <History hisOpen={openHistory} handleHistory={setOpenHistory} historyData={historyData} setInputHis={setInput}/>
     </ThemeProvider>
   );
 }
