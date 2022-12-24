@@ -15,6 +15,40 @@
     --clr-t1-key-hvr: hsl(224, 36%, 70%);
     --clr-t1-equal-tog-hvr: hsl(6, 63%, 60%);
 
+    /* Theme 2 */
+    --clr-t2-bg: hsl(0, 0%, 90%);
+    --clr-t2-tokp-bg: hsl(0, 5%, 81%);
+    --clr-t2-scr-bg: hsl(0, 0%, 93%);
+    --clr-t2-key-bg: hsl(185, 42%, 37%);
+    --clr-t2-key-sha: hsl(185, 58%, 25%);
+    --clr-t2-key-tok-bg: hsl(25, 98%, 40%);
+    --clr-t2-key-tok-sha: hsl(25, 99%, 27%);
+    --clr-t2-key-bg-pri: hsl(45, 7%, 89%);
+    --clr-t2-key-bg-pri-sha: hsl(35, 11%, 61%);
+    --clr-t2-text: hsl(60, 10%, 19%);
+    /* TODO  */
+    --clr-t2-txt-hvr: hsl(30, 25%, 99%);
+    --clr-t2-key-hvr: hsl(185, 42%, 57%);
+    --clr-t2-equal-tog-hvr: hsl(25, 98%, 60%);
+
+    /* Theme 3 */
+    --clr-t3-bg: hsl(268, 75%, 9%);
+    --clr-t3-tokp-bg: hsl(268, 71%, 12%);
+    --clr-t3-scr-bg: hsl(268, 71%, 12%);
+    --clr-t3-key-bg: hsl(281, 89%, 26%);
+    --clr-t3-key-sha: hsl(285, 91%, 52%);
+    --clr-t3-key-tok-bg: hsl(176, 100%, 44%);
+    --clr-t3-key-tok-sha: hsl(177, 92%, 70%);
+    --clr-t3-key-bg-pri: hsl(268, 47%, 21%);
+    --clr-t3-key-bg-pri-sha: hsl(290, 70%, 36%);
+    --clr-t3-text: hsl(52, 100%, 62%);
+    /* TODO  */
+    --clr-t3-txt-hvr: hsl(281, 89%, 36%);
+    --clr-t3-key-hvr: hsl(285, 90%, 42%);
+    --clr-t3-equal-tog-hvr: hsl(176, 100%, 84%);
+
+
+
     --clr-white: hsl(0, 0%, 100%);
     --ff: 'League Spartan', sans-serif;
     --numbers-fs: 32px;
@@ -49,8 +83,56 @@ body{
     --key-pri-hvr: var(--clr-t1-txt-hvr);
     --key-del-reset-hvr: var(--clr-t1-key-hvr);
     --key-equal-toggle-hvr: var(--clr-t1-equal-tog-hvr);
+    --toogle-bg: var(--clr-t1-tokp-bg);
+    --toogle-checked: var(--clr-t1-key-tok-bg);
+    --header-txt-clr: var(--clr-white);
+    --screen-txt-clr: var(--clr-white);
+    --clr-equal: var(--clr-white);
 
     background-color: var(--bg);
+}
+
+.theme2-clr{
+    --bg: var(--clr-t2-bg);
+    --scr-bg: var(--clr-t2-scr-bg);
+    --key-equal: var(--clr-t2-key-tok-bg);
+    --key-equal-sha: var(--clr-t2-key-tok-sha);
+    --keypad-bg: var(--clr-t2-tokp-bg);
+    --num-txt: var(--clr-t2-text);
+    --key-bg-pri: var(--clr-t2-key-bg-pri);
+    --key-bg-pri-sha: var(--clr-t2-key-bg-pri-sha);
+    --key-del-reset: var(--clr-t2-key-bg);
+    --key-del-reset-sha: var(--clr-t2-key-sha);
+    --key-pri-hvr: var(--clr-t2-txt-hvr);
+    --key-del-reset-hvr: var(--clr-t2-key-hvr);
+    --key-equal-toggle-hvr: var(--clr-t2-equal-tog-hvr);
+    --toogle-bg: var(--clr-t2-tokp-bg);
+    --toogle-checked: var(--clr-t2-key-tok-bg);
+    --header-txt-clr: var(--clr-t2-text);
+    --screen-txt-clr: var(--clr-t2-text);
+    --clr-equal: var(--clr-white);
+
+}
+
+.theme3-clr{
+    --bg: var(--clr-t3-bg);
+    --scr-bg: var(--clr-t3-scr-bg);
+    --key-equal: var(--clr-t3-key-tok-bg);
+    --key-equal-sha: var(--clr-t3-key-tok-sha);
+    --keypad-bg: var(--clr-t3-tokp-bg);
+    --num-txt: var(--clr-t3-text);
+    --key-bg-pri: var(--clr-t3-key-bg-pri);
+    --key-bg-pri-sha: var(--clr-t3-key-bg-pri-sha);
+    --key-del-reset: var(--clr-t3-key-bg);
+    --key-del-reset-sha: var(--clr-t3-key-sha);
+    --key-pri-hvr: var(--clr-t3-txt-hvr);
+    --key-del-reset-hvr: var(--clr-t3-key-hvr);
+    --key-equal-toggle-hvr: var(--clr-t3-equal-tog-hvr);
+    --toogle-bg: var(--clr-t3-tokp-bg);
+    --toogle-checked: var(--clr-t3-key-tok-bg);
+    --header-txt-clr: var(--clr-t3-text);
+    --screen-txt-clr: var(--clr-t3-text);
+    --clr-equal: hsl(0, 0%, 0%);
 }
 
 .container{

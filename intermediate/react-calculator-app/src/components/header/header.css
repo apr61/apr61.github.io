@@ -1,8 +1,65 @@
 header{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     max-width: var(--max-width);
-    color: var(--clr-white);
+    color: var(--header-txt-clr);
     margin-inline: auto;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.title{
+    margin-right: auto;
+}
+
+.theme{
+    margin-top: 1.5rem;
+    font-size: .75rem;
+}
+
+fieldset{
+    position: relative;
+    border: none;
+    margin-top: 1.5rem;
+    background-color: var(--toogle-bg);
+    width: 4rem;
+    height: 1.2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .25rem .15rem;
+}
+
+label{
+    position: absolute;
+    top: -1rem;
+    font-size: .75rem;
+}
+
+label:first-child{
+    left: 0.5rem;
+}
+
+label:nth-of-type(2){
+    left: 1.75rem;
+}
+
+label:nth-of-type(3){
+    right: 0.5rem;
+}
+
+input[type='radio']{
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type='radio']:checked{
+    background-color: var(--toogle-checked);
+}
+
+input[type='radio']:checked:hover{
+    background-color: var(--key-equal-toggle-hvr);
 }

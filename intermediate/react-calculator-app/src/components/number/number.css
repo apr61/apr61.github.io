@@ -1,13 +1,13 @@
 button{
     border: 0;
-    background-color: var(--clr-t1-key-bg-pri);
+    background-color: var(--key-bg-pri);
     padding: .5rem 1rem;
     font-size: var(--numbers-fs);
     border-radius: .25rem;
     cursor: pointer;
     font-family: var(--ff);
     color: var(--num-txt);
-    box-shadow: 0px 2px 0px 0px var(--clr-t1-key-bg-pri-sha);
+    box-shadow: 0px 2px 0px 0px var(--key-bg-pri-sha);
 }
 
 button:hover{
@@ -37,7 +37,7 @@ button:hover{
 
 button[type = 'submit']{
     background-color: var(--key-equal);
-    color: var(--clr-white);
+    color: var(--clr-equal);
     box-shadow: 0px 2px 0px 0px var(--key-equal-sha);
     grid-area: eql;
 }

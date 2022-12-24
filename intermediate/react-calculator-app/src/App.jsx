@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/header/Header';
 import Number from './components/number/Number';
 import Screen from './components/screen/Screen';
+import ThemeProvider from './context/ThemeContext';
 
 const numOp = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', 'x', '/', '.', '=', 'reset', 'del'];
 const ButtonTypes = ['=', 'reset', 'del']
@@ -56,27 +57,31 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    let numbers = [];
-    let inpArr = input.split('');
-    let currNum = '';
-    inpArr.forEach(inp => {
-      if(!isNaN(+inp) || inp === '.'){
-        currNum+=inp;
-      }else{
+    if(input !== '' && !isOperator(input.charAt(0))){
+      let numbers = [];
+      let inpArr = input.split('');
+      let currNum = '';
+      inpArr.forEach(inp => {
+        if (!isNaN(+inp) || inp === '.') {
+          currNum += inp;
+        } else {
+          numbers.push(+currNum)
+          numbers.push(inp);
+          currNum = '';
+        }
+      })
+      if (currNum !== '') {
         numbers.push(+currNum)
-        numbers.push(inp);
-        currNum = '';
+        currNum = ''
       }
-    })
-    if(currNum!== ''){
-      numbers.push(+currNum)
-      currNum = ''
+      setInput(eval(numbers.join('')) + '');
+    }else{
+      setInput('');
     }
-    setInput(eval(numbers.join(''))+'');
   }
 
   return (
-    <>
+    <ThemeProvider>
       <Header />
       <main className="container">
         <form onSubmit={handleSubmit}>
@@ -89,7 +94,7 @@ function App() {
           </section>
         </form>
       </main>
-    </>
+    </ThemeProvider>
   );
 }
 

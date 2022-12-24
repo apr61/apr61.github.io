@@ -4,7 +4,7 @@ import './screen.css'
 function Screen({input}) {
   return (
     <section className='screen'>
-        <div data-screen>{input}</div>
+        <div>{input}</div>
     </section>
   )
 }
