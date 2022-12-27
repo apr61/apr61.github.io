@@ -1,6 +1,6 @@
-{
+export const data = {
   "currentUser": {
-    "image": { 
+    "image": {
       "png": "./images/avatars/image-juliusomo.png",
       "webp": "./images/avatars/image-juliusomo.webp"
     },
@@ -13,13 +13,14 @@
       "createdAt": "1 month ago",
       "score": 12,
       "user": {
-        "image": { 
+        "image": {
           "png": "./images/avatars/image-amyrobson.png",
           "webp": "./images/avatars/image-amyrobson.webp"
         },
         "username": "amyrobson"
       },
-      "replies": []
+      "replies": [
+      ]
     },
     {
       "id": 2,
@@ -27,7 +28,7 @@
       "createdAt": "2 weeks ago",
       "score": 5,
       "user": {
-        "image": { 
+        "image": {
           "png": "./images/avatars/image-maxblagun.png",
           "webp": "./images/avatars/image-maxblagun.webp"
         },
@@ -41,12 +42,13 @@
           "score": 4,
           "replyingTo": "maxblagun",
           "user": {
-            "image": { 
+            "image": {
               "png": "./images/avatars/image-ramsesmiron.png",
               "webp": "./images/avatars/image-ramsesmiron.webp"
             },
             "username": "ramsesmiron"
-          }
+          },
+          'replies': []
         },
         {
           "id": 4,
@@ -55,12 +57,13 @@
           "score": 2,
           "replyingTo": "ramsesmiron",
           "user": {
-            "image": { 
+            "image": {
               "png": "./images/avatars/image-juliusomo.png",
               "webp": "./images/avatars/image-juliusomo.webp"
             },
             "username": "juliusomo"
-          }
+          },
+          'replies': []
         }
       ]
     }

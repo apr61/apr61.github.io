@@ -163,6 +163,41 @@ body {
     grid-area: userimg;
 }
 
+.comment__reply{
+    margin-left: 4rem;
+}
+
+.atrateuser{
+    color: var(--clr-pri-mod-blue);
+    font-weight: 500;
+}
+
+
+.nested__comments__stack{
+    display: flex;
+}
+
+.line{
+    border: 0;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    transform: translateX(-50%);
+    margin: 0 1rem;
+}
+.line::before{
+    content: '';
+    position: absolute;
+    top:0;
+    bottom: 1rem;
+    width: 1px;
+    background-color: var(--clr-neu-gry-blue);
+}
+/* .line:hover, .line:focus-visible{
+    outline: none;
+    background-color: transparent;
+} */
+
 @media (min-width: 50rem) {
     .comment__container {
         width: 45rem;
@@ -194,5 +229,8 @@ body {
     .comment__add__form {
         grid-template-columns: auto 1fr auto;
         grid-template-areas: "userimg textarea sendbtn";
+    }
+    .line{
+        margin: 0 2rem;
     }
 }

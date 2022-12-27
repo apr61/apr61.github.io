@@ -14,37 +14,11 @@
 
 <body>
   <main>
-    <section class="comment__container">
-      <div class="comment__card">
-        <div class="comment__header">
-          <img class="comment__user__img" src="./images/avatars/image-amyrobson.webp" alt="amyrobson">
-          <h3 class="comment__user__name">amyrobson</h3><span class="current_user">you</span>
-          <p class="comment__createdat">1 month ago</p>
-        </div>
-        <article class="comment__message">
-          <p>
-            Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've
-            nailed the design and the responsiveness at various breakpoints works really well.
-          </p>
-        </article>
-        <div class="comment__score">
-          <img src="./images/icon-plus.svg" alt="plus">
-          <span class="score">12</span>
-          <img src="./images/icon-minus.svg" alt="minus">
-        </div>
-        <div class="comment__controls">
-          <button class="comment__btn controls__btn"><img src="./images/icon-reply.svg" alt="reply">Reply</button>
-          <button class="comment__btn controls__btn controls__btn--del"><img src="./images/icon-delete.svg" alt="delete">Delete</button>
-          <button class="comment__btn controls__btn"><img src="./images/icon-edit.svg" alt="edit">Edit</button>
-        </div>
-      </div>
-      <div class="comment__card comment__add__form" data-add-comment>
-        <img src="./images/avatars/image-juliusomo.webp" alt="juliusomo" class="comment__user__img">
-        <textarea class="comment__input__box" placeholder="Add a comment..." row="20"></textarea>
-        <button class="comment__btn">Send</button>
-      </div>
+    <section class="comment__container" data-comment-container>
+      
     </section>
   </main>
+  <script src="./script.js" type="module"></script>
 </body>
 
 </html>
