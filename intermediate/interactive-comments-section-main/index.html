@@ -10,6 +10,7 @@
 
   <title>Frontend Mentor | Interactive comments section</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/dd4e279429.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,6 +18,14 @@
     <section class="comment__container" data-comment-container>
       
     </section>
+    <dialog class="modal" id="del-modal">
+      <h3 class="modal__title">Delete Comment</h3>
+      <p class="modal__desc">Are you sure you want to delete the comment? This will remove the comment and can't be undone.</p>
+      <div class="modal__btn__wrapper">
+        <button class="comment__btn modal__btn--cancel close__modal">No, cancel</button>
+        <button class="comment__btn modal__btn--delete" data-del-cmt>Yes, Delete</button>
+      </div>
+    </dialog>
   </main>
   <script src="./script.js" type="module"></script>
 </body>

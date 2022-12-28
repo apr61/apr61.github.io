@@ -74,10 +74,10 @@ body {
 .comment__message {
     margin: 1rem 0;
     grid-area: article;
+    line-height: 1.25;
 }
 
 .comment__message p {
-    line-height: 1.5;
     font-weight: 400;
     color: var(--clr-neu-gry-blue);
 }
@@ -99,8 +99,15 @@ body {
     font-weight: 400;
 }
 
-.comment__score img {
+.comment__score__btn{
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: var(--clr-pri-gry-blue);
+}
+
+.comment__score__btn:hover{
+    color: var(--clr-pri-mod-blue);
 }
 
 .comment__controls {
@@ -122,6 +129,10 @@ body {
     cursor: pointer;
 }
 
+.comment__btn:hover{
+    background-color: var( --clr-pri-gry-blue);
+}
+
 .controls__btn {
     background-color: transparent;
     color: var(--clr-pri-mod-blue);
@@ -135,8 +146,18 @@ body {
     padding: 0;
 }
 
+.controls__btn:hover{
+    color: var( --clr-pri-gry-blue);
+    background-color: transparent;
+}
+
 .controls__btn--del {
     color: var(--clr-pri-sft-red);
+}
+
+.controls__btn--del:hover{
+    color: var(--clr-pri-pale-red);
+    background-color: transparent;
 }
 
 .comment__input__box {
@@ -146,10 +167,15 @@ body {
     border-radius: .5rem;
     resize: none;
     grid-area: textarea;
+    line-height: 1.25;
+    font-size: .95rem;
+    overflow: hidden;
+    caret-color: var(--clr-pri-mod-blue);
+    color: var(--clr-neu-gry-blue);
 }
 
 .comment__input__box:focus {
-    outline: none;
+    outline: 1px solid var(--clr-pri-mod-blue);
 }
 
 .comment__add__form {
@@ -205,6 +231,53 @@ body {
     margin-left: auto;
 }
 
+.modal{
+    position: fixed;
+    transform: translateY(150%);
+    margin-inline: auto;
+    padding: 1.5rem;
+    border: none;
+    border-radius: .75rem;
+    max-width: 25rem;
+}
+
+.modal::backdrop{
+    background-color: hsl(211, 10%, 45%, .4);
+}
+
+.modal__btn--cancel, .modal__btn--delete{
+    font-size: .85rem;
+}
+
+.modal__btn--delete{
+    background-color: var(--clr-pri-sft-red);
+}
+
+.modal__btn--delete:hover{
+    background-color: var(--clr-pri-pale-red);
+}
+
+.modal__btn--cancel{
+    background-color: var(--clr-neu-dark-blue);
+}
+
+.modal__btn--cancel:hover{
+    background-color: var( --clr-neu-gry-blue);
+}
+
+.modal__btn__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__title{
+    color: var(--clr-neu-dark-blue);
+}
+
+.modal__desc{
+    margin: 1rem 0;
+    color :var(--clr-neu-gry-blue);
+}
 @media (min-width: 50rem) {
     .comment__container {
         width: 45rem;

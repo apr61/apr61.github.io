@@ -7,6 +7,9 @@ const commentContainer = document.querySelector('[data-comment-container]')
 
 let globalId = 5;
 
+let glbCommentID;
+let glbParentID;
+
 commentContainer.addEventListener('click', (e) => {
     const reply = e.target.closest('[data-reply]')
     const commentCard = e.target.closest('.comment__card')
@@ -14,24 +17,26 @@ commentContainer.addEventListener('click', (e) => {
     const delComment = e.target.closest('[data-del-comment]')
     const editComment = e.target.closest('[data-edit-comment]')
     const updateCommentBtn = e.target.closest('.comment__btn--update')
+    const scorePlusBtn = e.target.closest('[data-score_plus]')
+    const scoreMinusBtn = e.target.closest('[data-score_minus]')
 
     if (reply && !commentCard.nextElementSibling?.classList.contains('comment__add__form')) {
-        let replyingTo = reply.parentNode.parentNode?.querySelector('.comment__user__name').textContent||''
+        let replyingTo = commentCard.parentNode?.querySelector('.comment__user__name').textContent||''
         commentCard.after(commentForm('reply', replyingTo));
     }
     if (addCommentBtn) {
-        let commentBody = addCommentBtn.parentNode.querySelector('[data-comment-content]').value
+        let commentBody = commentCard.querySelector('[data-comment-content]').value
         let replyingTo = commentBody.startsWith('@') ? 
                             commentBody.split(' ')[0].slice(1, commentBody.split(' ')[0].length) : null
-        let parentId = +addCommentBtn.parentNode.previousElementSibling?.dataset.par_id;
-        let commentId = +addCommentBtn.parentNode.previousElementSibling?.dataset.id;
+        let parentId =  +commentCard.previousElementSibling?.dataset.par_id;
+        let commentId = addCommentBtn.dataset.btn === 'send' ? 0 : +commentCard.previousElementSibling?.dataset.id;
         if(!commentBody.length) return
         addComment(commentBody.slice(replyingTo?.length+1, commentBody.length), parentId === 0 ? commentId : parentId, replyingTo);
     }
     if(delComment){
-        let commentID = +delComment.parentNode.parentNode.dataset.id;
-        let parentID = +delComment.parentNode.parentNode.dataset.par_id;
-        deleteComment(commentID, parentID)
+        modal.showModal();
+        glbCommentID = +delComment.parentNode.parentNode.dataset.id;
+        glbParentID = +delComment.parentNode.parentNode.dataset.par_id;
     }
     if(editComment){
         const commentMessage = commentCard.querySelector('.comment__message p')
@@ -42,12 +47,19 @@ commentContainer.addEventListener('click', (e) => {
         commentCard.innerHTML+='<button class="comment__btn comment__btn--update">Update</button>'
     }
     if(updateCommentBtn){
-        let commentBody = updateCommentBtn.parentNode.querySelector('.comment__input__box').value
-        let commentID = +updateCommentBtn.parentNode.dataset.id;
-        let parentID = +updateCommentBtn.parentNode.dataset.par_id;
+        let commentBody = commentCard.querySelector('.comment__input__box').value
+        let commentID = +commentCard.parentNode.dataset.id;
+        let parentID = +commentCard.parentNode.dataset.par_id;
         let replyingTo = commentBody.startsWith('@') ? 
                             commentBody.split(' ')[0].slice(1, commentBody.split(' ')[0].length) : null
         updateComment(commentBody.slice(replyingTo?.length+1, commentBody.length),commentID, parentID, replyingTo)
+    }
+
+    if(scorePlusBtn){
+        scoreFunctionality(+commentCard.dataset.par_id, +commentCard.dataset.id, 'plus')
+    }
+    if(scoreMinusBtn){
+        scoreFunctionality(+commentCard.dataset.par_id, +commentCard.dataset.id, 'minus')
     }
 })
 
@@ -55,7 +67,7 @@ commentContainer.addEventListener('click', (e) => {
 function displayComments() {
     commentContainer.innerHTML = commentList(comments)
     commentContainer.appendChild(commentForm())
-    // localStorage.setItem('comments', JSON.stringify(comments))
+    localStorage.setItem('comments', JSON.stringify(comments))
 }
 
 function commentList(comments) {
@@ -128,14 +140,38 @@ function updateComment(message, replyId, parentId, replyingTo){
     displayComments()
 }
 
+function scoreFunctionality(parentId, commentId, functionality){
+    if(parentId === 0){
+        comments = comments.map(comment => {
+            if(comment.id === commentId){
+               functionality === 'plus'? comment['score'] += 1 : comment['score'] -= 1
+            }
+            return comment
+        })
+    }else{
+        comments = comments.map(comment => {
+            if(comment.id === parentId){
+                comment['replies'] = comment['replies'].map(reply => {
+                    if(reply.id === commentId){
+                        functionality === 'plus'? reply['score'] += 1 : reply['score'] -= 1
+                    }
+                    return reply
+                })
+            }
+            return comment
+        })
+    }
+    displayComments()
+}
+
 function commentForm(value = 'send', replyingTo = '') {
     const div = document.createElement('div')
     div.setAttribute('class', 'comment__card comment__add__form')
     div.innerHTML = `
         <img src=${currentUser['image']['webp']} alt=${currentUser.username} class="comment__user__img">
         <textarea class="comment__input__box"
-        placeholder="Add a comment..." data-comment-content row="20" id='content'>${replyingTo?`@${replyingTo}`:''}</textarea>
-        <button class="comment__btn" data-btn>${value}</button>
+        placeholder="Add a comment..." data-comment-content row="30" id='content'>${replyingTo?`@${replyingTo}`:''}</textarea>
+        <button class="comment__btn" data-btn=${value}>${value}</button>
     `
     return div;
 }
@@ -155,15 +191,15 @@ function commentCard(comment) {
                 </p>
             </article>
             <div class="comment__score">
-                <img src="./images/icon-plus.svg" alt="plus">
+                <button class='comment__score__btn' data-score_plus><i class="fa-solid fa-plus"></i></button>
                 <span class="score">${comment.score}</span>
-                <img src="./images/icon-minus.svg" alt="minus">
+                <button class='comment__score__btn'  data-score_minus><i class="fa-solid fa-minus"></i></button>
             </div>
             <div class="comment__controls">
             ${comment.user['username'] === currentUser.username ?
-            '<button class="comment__btn controls__btn controls__btn--del" data-del-comment><img src="./images/icon-delete.svg" alt="delete">Delete</button>' +
-            '<button class="comment__btn controls__btn" data-edit-comment><img src="./images/icon-edit.svg" alt="edit">Edit</button>'
-            : '<button class="comment__btn controls__btn" data-reply><img src="./images/icon-reply.svg" alt="reply">Reply</button>'}
+            '<button class="comment__btn controls__btn controls__btn--del" data-del-comment><i class="fa-solid fa-trash"></i>Delete</button>' +
+            '<button class="comment__btn controls__btn" data-edit-comment><i class="fa-solid fa-pen"></i>Edit</button>'
+            : '<button class="comment__btn controls__btn" data-reply><i class="fa-solid fa-reply"></i>Reply</button>'}
             </div>
         </div>
         ${comment['replies']?.length > 0 ?
@@ -203,3 +239,21 @@ function formatTimeAgo(date) {
 }
 
 displayComments();
+
+//modal
+
+const modal = document.querySelector('#del-modal')
+const closeModal = document.querySelector('.close__modal')
+const delCmtYesBtn = document.querySelector('[data-del-cmt]')
+closeModal.addEventListener('click', modalClose)
+
+function modalClose(){
+    modal.close()
+}
+
+delCmtYesBtn.addEventListener('click', deleteCommentFun)
+
+function deleteCommentFun(){
+    deleteComment(glbCommentID, glbParentID)
+    modalClose()
+}
